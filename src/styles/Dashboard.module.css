@@ -1,0 +1,31 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #10002b;
+  }
+
+  .button {
+    border: 0;
+    outline: none;
+    width: 350px;
+    height: 40px;
+    background-color: #00b4d8;
+    color: #03045e;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: filter 0.2s
+  }
+  
+  .button:hover {
+    filter: saturate(0.8);
+  }
+  
+  .ex {
+    margin-top: 20px;
+  }
