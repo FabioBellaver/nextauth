@@ -11,8 +11,8 @@ First, you have to clone the back-end [here](https://github.com/rocketseat-educa
 
 To run the server install de dependencies, type:
 
-	$ yarn  
-    	$ yarn dev
+    $ yarn
+    $ yarn dev
 
 After that you can clone this repo on terminal, this way:
 
