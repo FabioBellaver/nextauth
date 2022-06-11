@@ -1,26 +1,28 @@
-import { FormEvent, useContext, useState } from 'react'
-import { AuthContext } from '../../contexts/AuthContext'
-import styles from '../styles/Home.module.css'
+import { FormEvent, useContext, useState } from 'react';
+import { AuthContext } from '../contexts/AuthContext';
+import { withSSRGuest } from '../utils/withSSRGuest';
+
+import styles from '../styles/Home.module.css';
 
 export default function Home() {
 
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
-  const { signIn } = useContext(AuthContext)
+  const { signIn } = useContext(AuthContext);
 
   async function handleSubmit(event: FormEvent) {
 
-    event.preventDefault()
+    event.preventDefault();
 
     const data = {
       email,
       password,
-    }
+    };
 
-    await signIn(data)
+    await signIn(data);
 
-  }
+  };
 
   return (
     <div className={styles.container}>
@@ -51,3 +53,11 @@ export default function Home() {
     </div>
   )
 }
+
+export const getServerSideProps = withSSRGuest(async (ctx) => {
+
+  return {
+    props: {},
+  };
+
+});
