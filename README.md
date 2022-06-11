@@ -9,9 +9,10 @@ Authentication with JWT, setting AXIOS for the application, saving data and toke
 
 First, you have to clone the back-end [here](https://github.com/rocketseat-education/ignite-reactjs-auth-backend.git).
 
-To run the server just type:
+To run the server install de dependencies, type:
 
-    $ yarn dev
+	$ yarn  
+    	$ yarn dev
 
 After that you can clone this repo on terminal, this way:
 
